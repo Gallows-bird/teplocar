@@ -1,0 +1,96 @@
+@import "_fonts"
+
+button:focus
+	outline: none
+
+body
+	font-family: 'Proxima nova'
+	font-weight: 400
+
+.page-header-section
+	background: url('../img/bg-head-desk.png') no-repeat
+	background-position: right
+	min-height: 700px
+	background-size: auto auto
+
+.navbar-toggler
+	outline: none
+
+.nav-toggle
+	width: 20px
+	height: 15px
+	padding: 0
+	position: relative
+	border: none
+	outline: 0px
+
+.nav-toggle span
+	background-color: #a2a2a2
+	width: 20px
+	height: 3px
+	display: block
+	position: absolute
+	border-radius: 15px
+	top: 50%
+	left: 0
+	transition: 0.3s
+	&::before
+		content: ''
+		background-color: #a2a2a2
+		width: 20px
+		height: 3px
+		border-radius: 15px
+		display: block
+		position: absolute
+		transform: translateY(5px)
+		transition: 0.3s
+	&::after
+		content: ''
+		background-color: #a2a2a2
+		width: 20px
+		border-radius: 15px
+		height: 3px
+		display: block
+		position: absolute
+		transform: translateY(-5px)
+		transition: 0.3s
+
+.nav-toggle--active span
+	width: 0
+	&::after
+		transform: rotate(45deg)
+	&::before
+		transform: rotate(-45deg)
+
+.nav-link
+	font-size: 13px
+	color: #000000
+	&:hover
+		color: #1170dc
+
+.nav-item
+	margin-left: 20px
+
+.navbar-expand-md .navbar-nav .nav-link
+	padding-left: 0
+	padding-right: 0
+
+.white-wrap
+	background-color: #fff
+	display: flex
+	padding-right: 40px
+	border-radius: 50px
+	min-height: 70px
+	&::before
+		content: ''
+		background-color: #fff
+		width: 4000px
+		min-height: 70px
+		position: absolute
+
+.navbar-brand
+	display: flex
+	align-items: center
+
+.navbar
+	margin-top: -9px
