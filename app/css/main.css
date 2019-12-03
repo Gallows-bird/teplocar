@@ -31,8 +31,20 @@ body {
   overflow: hidden; }
 
 .page-header-section {
-  background: url("../img/bg-head-desk.png") 50% no-repeat;
-  min-height: 700px; }
+  min-height: 700px;
+  position: relative; }
+
+.bg-head {
+  position: absolute;
+  top: 0;
+  min-height: 700px;
+  right: 0;
+  left: 0;
+  z-index: -1; }
+
+.blue-bg {
+  background: url("../img/bgnext.png") left no-repeat;
+  background-size: cover; }
 
 .navbar-toggler {
   outline: none; }
@@ -146,25 +158,35 @@ body {
           align-items: center; }
 
 .navbar {
-  margin-top: -9px; }
+  margin-top: -10px; }
+
+.navbar-nav {
+  background-color: #fff;
+  border-radius: 50px;
+  padding: 15px 20px 15px 15px; }
 
 .car-header-img {
   position: absolute;
   right: 10%; }
 
 .hero {
-  margin-top: 70px;
+  margin-top: 90px;
   color: #ffffff; }
 
 .hero-title {
   font-size: 29px;
   font-weight: 700;
   text-transform: uppercase;
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  -webkit-animation: show 0.5s ease;
+          animation: show 0.5s ease; }
 
 .hero-text {
   font-size: 19px;
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  -webkit-animation: show 1s ease;
+          animation: show 1s ease;
+  white-space: nowrap; }
 
 .hero-icon {
   border-radius: 50%;
@@ -193,6 +215,7 @@ body {
   font-size: 17px;
   font-weight: 600;
   margin-left: 15px;
+  position: relative;
   white-space: nowrap;
   display: inlie-block; }
   .hero-tel:hover {
@@ -200,32 +223,60 @@ body {
             box-shadow: 0px 0px 30px #00abfb;
     text-decoration: none;
     color: #ffffff; }
-
-.hero-subtitle {
-  color: #69baff;
-  font-size: 13px; }
-
-.hero-tel-wrap {
-  margin-bottom: 35px;
-  position: relative; }
-  .hero-tel-wrap::after {
+  .hero-tel::after {
     content: '';
     background: url("../img/head-arrow.png") no-repeat;
     display: block;
     width: 38px;
     height: 69px;
+    -webkit-animation: show 2s ease;
+            animation: show 2s ease;
     position: absolute;
     top: -75px;
-    right: 120px; }
+    right: -50px; }
+
+.hero-subtitle {
+  color: #69baff;
+  font-size: 13px;
+  -webkit-animation: show 1s ease;
+          animation: show 1s ease; }
+
+.hero-tel-wrap {
+  margin-bottom: 35px;
+  position: relative;
+  -webkit-animation: show 1.5s ease;
+          animation: show 1.5s ease; }
 
 @-webkit-keyframes show {
   0% {
-    opacity: 0; }
+    opacity: 0;
+    margin-left: 50px; }
   100% {
-    opacity: 1; } }
+    opacity: 1;
+    margin-left: 0; } }
 
 @keyframes show {
   0% {
-    opacity: 0; }
+    opacity: 0;
+    margin-left: 50px; }
   100% {
-    opacity: 1; } }
+    opacity: 1;
+    margin-left: 0; } }
+
+@media (max-width: 767px) {
+  .page-header-section > .container:first-child {
+    max-width: 100%; }
+  .mob-head-wrap {
+    background-color: #fff; }
+  .navbar {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-top: 25px; }
+  .navbar-brand {
+    margin-right: 0; }
+  .nav-toggle {
+    position: absolute;
+    top: 40%;
+    right: 2%; } }
