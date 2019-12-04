@@ -10,9 +10,18 @@ $(document).ready(function () {
 		burgerAnimate.removeClass('nav-toggle--active');
 	});
 
-	$('.slider').slick({
-		infinite: true,
-		slidesToShow: 3,
-		slidesToScroll: 1
-	});
+});
+
+$(window).on("load resize", function(){
+	var width = $(document).width();
+	
+	if (width <= 991) {
+		$('.slider').slick('unslick');
+	} else {
+		$('.slider').not('.slick-initialized').slick({  
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			infinite: true
+		});
+	}
 });
