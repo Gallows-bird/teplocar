@@ -13,6 +13,7 @@ $(document).ready(function () {
 });
 
 $(window).on("load resize", function(){
+	$('.slide').css('display', 'flex');
 	var width = $(document).width();
 	
 	if (width <= 991) {
