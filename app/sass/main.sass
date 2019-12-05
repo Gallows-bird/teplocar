@@ -139,6 +139,9 @@ body
 	padding: 15px 35px
 	border-radius: 50px
 	transition: all 0.3s
+	&:hover
+		text-decoration: none
+		color: #fff
 
 .hero-tel
 	background-color: #00abfb
@@ -286,10 +289,21 @@ body
 .works-section
 	margin-bottom: 130px
 
+@keyframes fadeInRight
+	from
+		opacity: 0
+		transform: translate3d(100%, 0, 0)
+
+	to
+		opacity: 1
+		transform: translate3d(0, 0, 0)
+
 .works-item
 	padding: 22px 15px
 	font-size: 16px
 	font-weight: 700
+	animation-name: fadeInRight
+	animation-duration: 1s
 	border-bottom: solid 2px #e6e6e6
 	&:last-child
 		border: none
@@ -307,11 +321,6 @@ body
 	font-size: 30px
 	font-weight: 700
 	margin-bottom: 70px
-
-.btns
-	&:hover
-		text-decoration: none
-		color: #fff
 
 .slide
 	background-color: grey
@@ -768,7 +777,7 @@ body
 	&:focus
 		outline: none
 	&:hover
-		box-shadow: 0px 10px 25px #0a68e9
+		box-shadow: 0px 0px 30px #0a68e9
 
 .icon-car
 	display: none
@@ -795,27 +804,174 @@ body
 		margin-right: auto
 
 .page-footer
-	background-color: #2039bb
+	background: linear-gradient(to right, #2039bb 10%, #ffffff 10%, #ffffff 90%, #2039bb 90%)
 
 .footer-wrap
 	background-color: #fff
 	background-clip: content-box
 
+.footer-row
+	padding-top: 40px
+	padding-bottom: 60px
+	justify-content: space-around
+
 .logo-footer
 	margin-bottom: 20px
+	display: block
 
 .footer-text
 	font-size: 14px
 
-.footer-contact
+.footer-contact-title
 	font-size: 25px
 	font-weight: 700
+	color: #171717
+	margin-bottom: 20px
 
-.footer-call-link
+.footer-menu-title
+	text-align: center
+	font-size: 25px
+	font-weight: 700
+	color: #171717
+	margin-bottom: 20px
+
+.footer-call-link, .footer-mail-link
 	font-size: 19px
 	font-weight: 600
-	color: #000000
+	color: #171717
+	transition: all 0.3s
+	margin-left: 20px
+	&:hover
+		text-decoration: none
+		color: #2039bb
+
+.footer-tel, .footer-mail
+	display: flex
+	align-items: center
+	margin-bottom: 20px
+
+.footer-menu
+	list-style: none
+	padding: 0
+	text-align: center
+	margin: 0
+
+.footer-menu-item > a
+	color: #171717
+	font-size: 16px
+	font-weight: 600
 	transition: all 0.3s
 	&:hover
 		text-decoration: none
 		color: #2039bb
+
+.footer-menu-item
+	margin-bottom: 5px
+
+@media (max-width: 991px)
+	.logo-footer
+		margin-left: auto
+		margin-right: auto
+
+	.footer-text
+		text-align: center
+		font-size: 10px
+		margin-bottom: 25px
+
+	.footer-contact-title, .footer-menu-title
+		text-align: center
+		font-size: 16px
+
+	.footer-tel, .footer-mail
+		justify-content: center
+		margin-bottom: 10px
+
+	.footer-call-link, .footer-mail-link
+		font-size: 16px
+
+	.footer-menu-item a
+		font-size: 12px
+
+	.footer-menu-title
+		margin-top: 20px
+
+	.footer-row
+		padding-top: 20px
+		padding-bottom: 40px
+
+.sub-footer-text
+	font-size: 15px
+	font-weight: 600
+	color: #656565
+	margin: 0
+
+.copyright
+	color: #656565
+	&:hover
+		color: #656565
+
+.sub-footer
+	background-color: #050505
+	min-height: 80px
+	display: flex
+	align-items: center
+
+.form-dialog
+	max-width: 840px
+	margin-top: 100px
+
+.modal
+	padding-right: 0 !important
+
+.modal-bid-title
+	text-align: center
+
+.modal-bid-text
+	text-align: center
+
+.modal-bid
+	border: none
+	border-radius: 25px
+	box-shadow: 0px 8px 24px 0px rgba(59, 59, 59, 0.5)
+	padding: 60px 200px
+
+.express-subtitle
+	font-size: 11px
+	text-align: center
+	margin-top: 40px
+
+.show-tel
+	margin-left: 20px
+
+.close
+	color: #bebebe
+	position: absolute
+	top: 25px
+	right: 25px
+
+.modal-btn
+	margin-top: 20px
+	padding: 15px 50px
+	font-size: 18px
+	font-weight: 600
+	background-color: #0a68e9
+	color: #ffffff
+	border: none
+	&:focus
+		outline: none
+	&:hover
+		box-shadow: 0px 0px 30px #0a68e9
+
+@media (max-width: 991px)
+	.modal-bid
+		padding: 30px 20px
+
+	.modal-btn
+		margin-left: auto
+		margin-right: auto
+		width: 50%
+		display: block
+		padding: 10px 15px
+
+	.show-tel
+		display: none

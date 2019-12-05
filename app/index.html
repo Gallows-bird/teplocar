@@ -13,6 +13,30 @@
 </head>
 
 <body>
+	<!-- modal -->
+	<div class="modal fade" id="formModal" tabindex="-1" role="dialog">
+		<div class="modal-dialog form-dialog" role="document">
+			<div class="modal-content modal-bid">
+				<button type="button" class="close" data-dismiss="modal">X</button>
+				<img src="img/icon-car.png" alt="Иконка машины" class="icon-car">
+				<p class="express-title modal-bid-title">
+						Экспресс <span>Заявка</span>
+					</p>
+					<p class="express-text modal-bid-text">
+						Заполните анкету включая обязательные поля. Наш <br> менеджер перезвонит вам в течении 15 минут
+					</p>
+					<form action="send.php" method="POST" class="express-form">
+						<input type="text" class="express-inp" name="name" placeholder="Ваше имя">
+						<div class="required-inp"><input type="tel" class="express-inp" name="tel" placeholder="Ваш телефон" required></div>
+						<div class="required-inp"><input type="text" class="express-inp" name="adress" placeholder="Адрес / местоположение" required></div>
+						<p class="express-subtitle">Для самостоятельного звонка нажмите "Показать номер" и нажмите на кнопку для совершения вызова</p>
+						<input type="submit" value="Заказать" class="btns modal-btn">
+						<input type="button" value="Показать номер" class="btns modal-btn show-tel">
+					</form>
+			</div>
+		</div>
+	</div>
+	<!-- end modal -->
 	<header class="page-header">
 		<section class="page-header-section">
 			<div class="container mob-head-wrap">
@@ -59,10 +83,10 @@
 								оборудованием!
 							</p>
 							<div class="hero-tel-wrap">
-								<a class="hero-icon" href="#">
+								<a class="hero-icon" href="tel:+79224428965">
 									<img src="img/tel-hero.png" alt="Телефон" width="23" height="23">
 								</a>
-								<a href="#" class="hero-tel btns">
+								<a href="tel:+79224428965" class="hero-tel btns">
 									+7 (922) 4428965
 								</a>
 							</div>
@@ -123,7 +147,7 @@
 						<p class="slide-sum">
 							выезд / 2000 ₽
 						</p>
-						<a href="#" class="btns slide-btn">Заказать услугу</a>
+						<a href="#" type="button" class="btns slide-btn" data-toggle="modal" data-target="#formModal">Заказать услугу</a>
 					</div>
 				</div>
 				<div>
@@ -137,7 +161,7 @@
 						<p class="slide-sum">
 							выезд / 3500 ₽
 						</p>
-						<a href="#" class="btns slide-btn">Заказать услугу</a>
+						<a href="#" class="btns slide-btn" data-toggle="modal" data-target="#formModal">Заказать услугу</a>
 					</div>
 				</div>
 				<div>
@@ -151,7 +175,7 @@
 						<p class="slide-sum">
 							1 час / 1000 ₽
 						</p>
-						<a href="#" class="btns slide-btn">Заказать услугу</a>
+						<a href="#" class="btns slide-btn" data-toggle="modal" data-target="#formModal">Заказать услугу</a>
 					</div>
 				</div>
 				<div>
@@ -165,7 +189,7 @@
 						<p class="slide-sum">
 							выезд / 2500 ₽
 						</p>
-						<a href="#" class="btns slide-btn">Заказать услугу</a>
+						<a href="#" class="btns slide-btn" data-toggle="modal" data-target="#formModal">Заказать услугу</a>
 					</div>
 				</div>
 			</div>
@@ -191,7 +215,7 @@
 						<br><br>
 						Заказ бригады <b><i>TEPLOCAR</i></b> <br> по номеру:
 					</p>
-					<a href="#" class="btns call-btn">+7 (922) 4428965</a>
+					<a href="tel:+79224428965" class="btns call-btn">+7 (922) 4428965</a>
 					<p class="call-subtext text-center d-block d-lg-none">*Нажмите на кнопку для <br> автоматического звонка</p>
 				</div>
 				<div class="col-lg-6">
@@ -305,25 +329,47 @@
 	</section>
 	<footer class="page-footer">
 		<div class="container footer-wrap">
-			<div class="row">
-					<div class="col-md-4">
+			<div class="row footer-row">
+					<div class="col-10 col-lg-4">
 						<img src="img/desk-logo.png" alt="Лого" class="logo-footer">
 						<p class="footer-text">
-							Разогрев авто в Сургуте - команда специалистов, которые делают свою работу быстро и профессионально. При отогреве частей автомобиля мы используем только брендовое и проверенное оборудование.
+							TEPLOCAR в Сургуте - команда специалистов, которые делают свою работу быстро и профессионально. При отогреве частей автомобиля мы используем только брендовое и проверенное оборудование.
 						</p>
 					</div>
-					<div class="col-md-3">
-						<p class="footer-contact">
+					<div class="col-lg-3">
+						<p class="footer-contact-title">
 							Контакты
 						</p>
 						<div class="footer-tel">
-							<img src="img/call.png" alt="Звонок">
-							<a href="" class="footer-call-link">+7 (922) 4428965</a>
+							<img src="img/call.png" alt="Звонок" width="19" height="19">
+							<a href="tel:+79224428965" class="footer-call-link">+7 (922) 4428965</a>
 						</div>
+						<div class="footer-mail">
+							<img src="img/mail.png" alt="Почта" width="19" height="19">
+							<a href="mailto:teplocar@mail.ru" class="footer-mail-link">teplocar@mail.ru</a>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<p class="footer-menu-title">
+							Меню
+						</p>
+						<ul class="footer-menu">
+							<li class="footer-menu-item"><a href="#">Прайс-лист</a></li>
+							<li class="footer-menu-item"><a href="#">Онлайн звонок</a></li>
+							<li class="footer-menu-item"><a href="#">Оформить заявку</a></li>
+							<li class="footer-menu-item"><a href="#">Контакты</a></li>
+						</ul>
 					</div>
 			</div>
 		</div>
 	</footer>
+	<div class="sub-footer">
+		<div class="container">
+			<p class="sub-footer-text">
+				2019 Teplocar, сделано в <a href="https://nashe-reshenie.ru/" class="copyright"><b>Наше решение</b></a>
+			</p>
+		</div>
+	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
 		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
