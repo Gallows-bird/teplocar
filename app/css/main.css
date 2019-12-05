@@ -190,6 +190,8 @@ body {
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s; }
+  .btns:focus {
+    outline: none; }
   .btns:hover {
     text-decoration: none;
     color: #fff; }
@@ -371,10 +373,6 @@ body {
   padding: 22px 15px;
   font-size: 16px;
   font-weight: 700;
-  -webkit-animation-name: fadeInRight;
-          animation-name: fadeInRight;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
   border-bottom: solid 2px #e6e6e6; }
   .works-item:last-child {
     border: none; }
@@ -665,8 +663,44 @@ body {
 
 .call-img {
   position: absolute;
-  left: -200px;
+  left: -215px;
   top: 40px; }
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+  50% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95); }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+  50% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95); }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+.call-logo {
+  position: absolute;
+  top: 100px;
+  left: 30px;
+  -webkit-animation-name: pulse;
+          animation-name: pulse;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  width: 270px; }
 
 @media (max-width: 991px) {
   .call-section {
@@ -689,10 +723,15 @@ body {
       background-repeat: no-repeat;
       background-size: contain;
       z-index: -1; }
+  .call-logo {
+    width: 200px;
+    top: 0;
+    left: 10px;
+    z-index: 2; }
   .call-img {
     max-width: 260px;
-    left: -95px;
-    top: -20px;
+    left: -130px;
+    top: -40px;
     z-index: 1; }
   .call-img-wrap::before {
     width: 600px;
@@ -860,6 +899,10 @@ body {
     border-color: #0a68e9;
     -webkit-box-shadow: 0px 2px 20px 0px rgba(0, 111, 236, 0.21);
             box-shadow: 0px 2px 20px 0px rgba(0, 111, 236, 0.21); }
+  .express-inp:required:focus {
+    border: 1px solid red;
+    -webkit-box-shadow: 0px 2px 20px 0px rgba(236, 0, 0, 0.21);
+            box-shadow: 0px 2px 20px 0px rgba(236, 0, 0, 0.21); }
 
 .required-inp {
   position: relative; }
@@ -1093,4 +1136,67 @@ body {
     display: block;
     padding: 10px 15px; }
   .show-tel {
+    display: none; } }
+
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+          animation-name: fadeInRight;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s; }
+
+.done-title {
+  font-size: 25px;
+  font-weight: 700;
+  text-align: center; }
+
+.modal-done {
+  border: none;
+  border-radius: 25px;
+  -webkit-box-shadow: 0px 8px 24px 0px rgba(59, 59, 59, 0.5);
+          box-shadow: 0px 8px 24px 0px rgba(59, 59, 59, 0.5);
+  padding: 50px 90px 90px 90px;
+  background: url("../img/done-bg.png") 50% 110% no-repeat;
+  background-color: #fff; }
+
+.icon-done {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px; }
+
+.done-text {
+  font-size: 16px;
+  text-align: center; }
+
+.done-dialog {
+  max-width: 500px;
+  margin-top: 200px; }
+
+@media (max-width: 991px) {
+  .modal-done {
+    background-image: none;
+    padding: 20px 40px 10px 40px; }
+  .done-dialog {
+    max-width: 275px;
+    margin-left: auto;
+    margin-right: auto; } }
+
+.modal-tel {
+  display: none;
+  margin-top: 20px;
+  padding: 17px 30px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-left: 20px;
+  background-color: #00abfb;
+  color: #ffffff;
+  border: none; }
+  .modal-tel:focus {
+    outline: none; }
+  .modal-tel:hover {
+    -webkit-box-shadow: 0px 0px 30px #00abfb;
+            box-shadow: 0px 0px 30px #00abfb; }
+
+@media (max-width: 991px) {
+  .modal-tel {
     display: none; } }

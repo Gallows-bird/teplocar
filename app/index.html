@@ -18,21 +18,39 @@
 		<div class="modal-dialog form-dialog" role="document">
 			<div class="modal-content modal-bid">
 				<button type="button" class="close" data-dismiss="modal">X</button>
-				<img src="img/icon-car.png" alt="Иконка машины" class="icon-car">
+				<img src="img/icon-car.png" alt="Иконка машины" class="icon-car" width="35" height="25">
 				<p class="express-title modal-bid-title">
-						Экспресс <span>Заявка</span>
-					</p>
-					<p class="express-text modal-bid-text">
-						Заполните анкету включая обязательные поля. Наш <br> менеджер перезвонит вам в течении 15 минут
-					</p>
-					<form action="send.php" method="POST" class="express-form">
-						<input type="text" class="express-inp" name="name" placeholder="Ваше имя">
-						<div class="required-inp"><input type="tel" class="express-inp" name="tel" placeholder="Ваш телефон" required></div>
-						<div class="required-inp"><input type="text" class="express-inp" name="adress" placeholder="Адрес / местоположение" required></div>
-						<p class="express-subtitle">Для самостоятельного звонка нажмите "Показать номер" и нажмите на кнопку для совершения вызова</p>
-						<input type="submit" value="Заказать" class="btns modal-btn">
-						<input type="button" value="Показать номер" class="btns modal-btn show-tel">
-					</form>
+					Экспресс <span>Заявка</span>
+				</p>
+				<p class="express-text modal-bid-text">
+					Заполните анкету включая обязательные поля. Наш <br> менеджер перезвонит вам в течении 15 минут
+				</p>
+				<form action="send.php" method="POST" class="express-form">
+					<input type="text" class="express-inp" name="name" placeholder="Ваше имя">
+					<div class="required-inp"><input type="tel" class="express-inp" name="tel" placeholder="Ваш телефон" required>
+					</div>
+					<div class="required-inp"><input type="text" class="express-inp" name="adress"
+							placeholder="Адрес / местоположение" required></div>
+					<p class="express-subtitle">Для самостоятельного звонка нажмите "Показать номер" и нажмите на кнопку для
+						совершения вызова</p>
+					<input type="submit" value="Заказать" class="btns modal-btn">
+					<input type="button" value="Показать номер" class="btns modal-btn show-tel">
+					<a href="tel:+79224428965" class="btns modal-tel">+7 (922) 4428965</a>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="doneModal" tabindex="-1" role="dialog">
+		<div class="modal-dialog done-dialog" role="document">
+			<div class="modal-content modal-done">
+				<button type="button" class="close" data-dismiss="modal">X</button>
+				<img src="img/done.png" alt="Спасибо" class="icon-done" width="73" height="73">
+				<p class="done-title">
+					Спасибо!
+				</p>
+				<p class="done-text">
+					Мы приняли вашу заявку. Ожидайте звонка менеджера в ближайшее время
+				</p>
 			</div>
 		</div>
 	</div>
@@ -52,16 +70,16 @@
 					<div class="collapse navbar-collapse" id="navbarCollapse">
 						<ul class="navbar-nav mr-auto">
 							<li class="nav-item">
-								<a href="#" class="nav-link">Прайс-лист</a>
+								<a href="#price" class="nav-link">Прайс-лист</a>
 							</li>
 							<li class="nav-item">
-								<a href="#" class="nav-link">Онлайн звонок</a>
+								<a href="#call" class="nav-link">Онлайн звонок</a>
 							</li>
 							<li class="nav-item">
-								<a href="#" class="nav-link">Оформить заявку</a>
+								<a href="#express" class="nav-link">Оформить заявку</a>
 							</li>
 							<li class="nav-item">
-								<a href="#" class="nav-link">Контакты</a>
+								<a href="#contacts" class="nav-link">Контакты</a>
 							</li>
 						</ul>
 					</div>
@@ -86,7 +104,7 @@
 								<a class="hero-icon" href="tel:+79224428965">
 									<img src="img/tel-hero.png" alt="Телефон" width="23" height="23">
 								</a>
-								<a href="tel:+79224428965" class="hero-tel btns">
+								<a href="tel:+79224428965" class="hero-tel btns" data-toggle="modal" data-target="#doneModal">
 									+7 (922) 4428965
 								</a>
 							</div>
@@ -99,9 +117,11 @@
 			</div>
 		</section>
 	</header>
-	<div class="row bg-head justify-content-between">
-		<div class="col-lg-6 col-md-7 blue-bg ml-auto">
+	<div class="container-fluid">
+		<div class="row bg-head justify-content-between">
+			<div class="col-lg-6 col-md-7 blue-bg ml-auto">
 
+			</div>
 		</div>
 	</div>
 	<section class="works-section">
@@ -116,13 +136,20 @@
 				<div class="col-md-6">
 					<div class="works-panel">
 						<ul class="works-list">
-							<li class="works-item"><img src="img/verified.png" alt="Работы"> Подзарядка аккумулятора</li>
-							<li class="works-item"><img src="img/verified.png" alt="Работы"> Разогрев замков и дверей</li>
-							<li class="works-item"><img src="img/verified.png" alt="Работы"> Запуск двигателя в мороз</li>
-							<li class="works-item"><img src="img/verified.png" alt="Работы"> Разогрев выхлопной системы</li>
-							<li class="works-item"><img src="img/verified.png" alt="Работы"> Разогрев тормозной системы</li>
-							<li class="works-item"><img src="img/verified.png" alt="Работы"> Разогрев грузовиков и спецтехники</li>
-							<li class="works-item"><img src="img/verified.png" alt="Работы"> Разогреть паркетник, внедорожник, минивен
+							<li class="works-item fadeInRight wow"><img src="img/verified.png" alt="Работы" data-wow-offset="40"
+									data-wow-delay="0s"> Подзарядка аккумулятора</li>
+							<li class="works-item fadeInRight wow"><img src="img/verified.png" alt="Работы" data-wow-offset="40"
+									data-wow-delay="0.2s"> Разогрев замков и дверей</li>
+							<li class="works-item fadeInRight wow"><img src="img/verified.png" alt="Работы" data-wow-offset="40"
+									data-wow-delay="0.4s"> Запуск двигателя в мороз</li>
+							<li class="works-item fadeInRight wow"><img src="img/verified.png" alt="Работы" data-wow-offset="40"
+									data-wow-delay="0.6s"> Разогрев выхлопной системы</li>
+							<li class="works-item fadeInRight wow"><img src="img/verified.png" alt="Работы" data-wow-offset="40"
+									data-wow-delay="0.8s"> Разогрев тормозной системы</li>
+							<li class="works-item fadeInRight wow"><img src="img/verified.png" alt="Работы" data-wow-offset="40"
+									data-wow-delay="1s"> Разогрев грузовиков и спецтехники</li>
+							<li class="works-item fadeInRight wow"><img src="img/verified.png" alt="Работы" data-wow-offset="40"
+									data-wow-delay="1.2s"> Разогреть паркетник, внедорожник, минивен
 							</li>
 						</ul>
 					</div>
@@ -130,7 +157,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="price-section">
+	<section class="price-section" id="price">
 		<p class="price-section-title text-center">
 			Цены на услуги
 		</p>
@@ -147,7 +174,7 @@
 						<p class="slide-sum">
 							выезд / 2000 ₽
 						</p>
-						<a href="#" type="button" class="btns slide-btn" data-toggle="modal" data-target="#formModal">Заказать услугу</a>
+						<a href="#" class="btns slide-btn" data-toggle="modal" data-target="#formModal">Заказать услугу</a>
 					</div>
 				</div>
 				<div>
@@ -198,7 +225,7 @@
 			Для индивидуального расчёта стоимости оказания <br> услуг звоните по горячему номеру
 		</p>
 	</section>
-	<section class="call-section">
+	<section class="call-section" id="call">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6">
@@ -221,6 +248,7 @@
 				<div class="col-lg-6">
 					<div class="call-img-wrap">
 						<img src="img/tel-desk.png" alt="Телефон" class="call-img">
+						<img src="img/call-logo.png" alt="Логотип" class="call-logo">
 					</div>
 				</div>
 			</div>
@@ -305,12 +333,12 @@
 			</div>
 		</div>
 	</section>
-	<section class="express-section">
+	<section class="express-section" id="express">
 		<img src="img/car-express.png" alt="Машина" class="express-car-img">
 		<div class="container">
 			<div class="row justify-content-lg-end justify-content-center">
 				<div class="col-lg-5">
-					<img src="img/icon-car.png" alt="Иконка машины" class="icon-car">
+					<img src="img/icon-car.png" alt="Иконка машины" class="icon-car" width="35" height="25">
 					<p class="express-title">
 						Экспресс <span>Заявка</span>
 					</p>
@@ -319,47 +347,50 @@
 					</p>
 					<form action="send.php" method="POST" class="express-form">
 						<input type="text" class="express-inp" name="name" placeholder="Ваше имя">
-						<div class="required-inp"><input type="tel" class="express-inp" name="tel" placeholder="Ваш телефон" required></div>
-						<div class="required-inp"><input type="text" class="express-inp" name="adress" placeholder="Адрес / местоположение" required></div>
+						<div class="required-inp"><input type="tel" class="express-inp" name="tel" placeholder="Ваш телефон"
+								required></div>
+						<div class="required-inp"><input type="text" class="express-inp" name="adress"
+								placeholder="Адрес / местоположение" required></div>
 						<input type="submit" value="Заказать" class="btns express-btn">
 					</form>
 				</div>
 			</div>
 		</div>
 	</section>
-	<footer class="page-footer">
+	<footer class="page-footer" id="contacts">
 		<div class="container footer-wrap">
 			<div class="row footer-row">
-					<div class="col-10 col-lg-4">
-						<img src="img/desk-logo.png" alt="Лого" class="logo-footer">
-						<p class="footer-text">
-							TEPLOCAR в Сургуте - команда специалистов, которые делают свою работу быстро и профессионально. При отогреве частей автомобиля мы используем только брендовое и проверенное оборудование.
-						</p>
+				<div class="col-10 col-lg-4">
+					<img src="img/desk-logo.png" alt="Лого" class="logo-footer">
+					<p class="footer-text">
+						TEPLOCAR в Сургуте - команда специалистов, которые делают свою работу быстро и профессионально. При отогреве
+						частей автомобиля мы используем только брендовое и проверенное оборудование.
+					</p>
+				</div>
+				<div class="col-lg-3">
+					<p class="footer-contact-title">
+						Контакты
+					</p>
+					<div class="footer-tel">
+						<img src="img/call.png" alt="Звонок" width="19" height="19">
+						<a href="tel:+79224428965" class="footer-call-link">+7 (922) 4428965</a>
 					</div>
-					<div class="col-lg-3">
-						<p class="footer-contact-title">
-							Контакты
-						</p>
-						<div class="footer-tel">
-							<img src="img/call.png" alt="Звонок" width="19" height="19">
-							<a href="tel:+79224428965" class="footer-call-link">+7 (922) 4428965</a>
-						</div>
-						<div class="footer-mail">
-							<img src="img/mail.png" alt="Почта" width="19" height="19">
-							<a href="mailto:teplocar@mail.ru" class="footer-mail-link">teplocar@mail.ru</a>
-						</div>
+					<div class="footer-mail">
+						<img src="img/mail.png" alt="Почта" width="19" height="19">
+						<a href="mailto:teplocar@mail.ru" class="footer-mail-link">teplocar@mail.ru</a>
 					</div>
-					<div class="col-lg-3">
-						<p class="footer-menu-title">
-							Меню
-						</p>
-						<ul class="footer-menu">
-							<li class="footer-menu-item"><a href="#">Прайс-лист</a></li>
-							<li class="footer-menu-item"><a href="#">Онлайн звонок</a></li>
-							<li class="footer-menu-item"><a href="#">Оформить заявку</a></li>
-							<li class="footer-menu-item"><a href="#">Контакты</a></li>
-						</ul>
-					</div>
+				</div>
+				<div class="col-lg-3">
+					<p class="footer-menu-title">
+						Меню
+					</p>
+					<ul class="footer-menu">
+						<li class="footer-menu-item"><a href="#price">Прайс-лист</a></li>
+						<li class="footer-menu-item"><a href="#call">Онлайн звонок</a></li>
+						<li class="footer-menu-item"><a href="#express">Оформить заявку</a></li>
+						<li class="footer-menu-item"><a href="#contacts">Контакты</a></li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</footer>
@@ -378,6 +409,7 @@
 		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
 		crossorigin="anonymous"></script>
 	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script src="js/wow.min.js"></script>
 	<script src="js/main.js"></script>
 </body>
 
