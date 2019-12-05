@@ -751,6 +751,9 @@ body {
 .rules-count {
   margin-right: 25px; }
 
+.rules-section {
+  margin-bottom: 130px; }
+
 .num-1::after {
   content: '';
   width: 2px;
@@ -791,4 +794,119 @@ body {
     -webkit-box-shadow: 0px 26px 18px 0px rgba(0, 111, 236, 0.21);
             box-shadow: 0px 26px 18px 0px rgba(0, 111, 236, 0.21);
     border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px; } }
+    border-bottom-right-radius: 50px;
+    margin-bottom: 100px; } }
+
+.express-section {
+  position: relative;
+  margin-bottom: 130px; }
+
+.express-car-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  min-width: 1150px; }
+
+.express-title {
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase; }
+  .express-title span {
+    color: #0a68e9; }
+
+.express-text {
+  font-size: 17px;
+  margin-bottom: 30px; }
+
+.express-inp {
+  display: block;
+  margin-bottom: 20px;
+  width: 100%;
+  font-size: 18px;
+  color: #212529;
+  padding: 15px 25px;
+  border: 1px solid #a4a4a4;
+  border-radius: 50px;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  position: relative; }
+  .express-inp:focus {
+    outline: none;
+    border-color: #0a68e9;
+    -webkit-box-shadow: 0px 2px 20px 0px rgba(0, 111, 236, 0.21);
+            box-shadow: 0px 2px 20px 0px rgba(0, 111, 236, 0.21); }
+
+.required-inp {
+  position: relative; }
+  .required-inp::after {
+    content: '*';
+    position: absolute;
+    top: 28px;
+    right: 18px;
+    font-size: 40px;
+    line-height: 20px;
+    color: #a4a4a4; }
+
+.express-btn {
+  margin-top: 20px;
+  padding: 15px 50px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #0a68e9;
+  color: #ffffff;
+  border: none; }
+  .express-btn:focus {
+    outline: none; }
+  .express-btn:hover {
+    -webkit-box-shadow: 0px 10px 25px #0a68e9;
+            box-shadow: 0px 10px 25px #0a68e9; }
+
+.icon-car {
+  display: none; }
+
+@media (max-width: 991px) {
+  .express-car-img {
+    display: none; }
+  .icon-car {
+    display: block;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto; }
+  .express-title {
+    text-align: center; }
+  .express-text {
+    text-align: center; }
+  .express-btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; } }
+
+.page-footer {
+  background-color: #2039bb; }
+
+.footer-wrap {
+  background-color: #fff;
+  background-clip: content-box; }
+
+.logo-footer {
+  margin-bottom: 20px; }
+
+.footer-text {
+  font-size: 14px; }
+
+.footer-contact {
+  font-size: 25px;
+  font-weight: 700; }
+
+.footer-call-link {
+  font-size: 19px;
+  font-weight: 600;
+  color: #000000;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
+  .footer-call-link:hover {
+    text-decoration: none;
+    color: #2039bb; }
