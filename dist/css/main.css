@@ -25,12 +25,10 @@
 button:focus {
   outline: none; }
 
-.page-wrapper {
-  overflow: hidden; }
-
 body {
   font-family: 'Proxima nova';
-  font-weight: 400; }
+  font-weight: 400;
+  overflow-x: hidden; }
 
 .page-header-section {
   min-height: 700px;
@@ -47,8 +45,7 @@ body {
 
 .blue-bg {
   background: url("../img/bgnext.png") left no-repeat;
-  background-size: cover;
-  margin-left: auto; }
+  background-size: cover; }
 
 .navbar-toggler {
   outline: none; }
@@ -176,9 +173,7 @@ body {
 .hero-icon {
   border-radius: 50%;
   background-color: #00abfb;
-  padding: 16px 16px;
-  max-width: 55px;
-  max-height: 55px;
+  padding: 12px 13px;
   display: inline-block;
   text-align: center;
   -webkit-transition: all 0.3s;
@@ -271,13 +266,12 @@ body {
 @media (max-width: 767px) {
   .page-header-section > .container:first-child {
     max-width: 100%; }
-  .dis-bg {
-    display: none; }
   .mob-head-wrap {
     background-color: #fff;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
-    padding-bottom: 15px; }
+    padding-bottom: 15px;
+    overflow: hidden; }
   .navbar {
     -webkit-box-pack: center;
     -webkit-justify-content: center;

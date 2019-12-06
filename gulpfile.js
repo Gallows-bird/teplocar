@@ -54,13 +54,13 @@ gulp.task('clean', async function() {
 
 gulp.task('img', function() {
 	return gulp.src('app/img/**/*') // Берем все изображения из app
-		.pipe(cache(imagemin({ // С кешированием
-		// .pipe(imagemin({ // Сжимаем изображения без кеширования
+		// .pipe(cache(imagemin({ // С кешированием
+		.pipe(imagemin({ // Сжимаем изображения без кеширования
 			interlaced: true,
 			progressive: true,
 			svgoPlugins: [{removeViewBox: false}],
 			use: [pngquant()]
-		}))/**/)
+		}))/**/
 		.pipe(gulp.dest('dist/img')); // Выгружаем на продакшен
 });
 
@@ -71,8 +71,8 @@ gulp.task('prebuild', async function() {
 		])
 	.pipe(gulp.dest('dist/css'))
 
-	// var buildFonts = gulp.src('app/fonts/**/*') // Переносим шрифты в продакшен
-	// .pipe(gulp.dest('dist/fonts'))
+	var buildFonts = gulp.src('app/fonts/**/*') // Переносим шрифты в продакшен
+	.pipe(gulp.dest('dist/fonts'))
 
 	var buildJs = gulp.src('app/js/**/*') // Переносим скрипты в продакшен
 	.pipe(gulp.dest('dist/js'))
