@@ -4,6 +4,7 @@ button:focus
 	outline: none
 
 .page-wrapper
+	position: relative
 	overflow: hidden
 
 body
@@ -136,6 +137,8 @@ body
 	display: inline-block
 	text-align: center
 	transition: all 0.3s
+	img
+		transform: translateY(-2px)
 	&:hover
 		box-shadow: 0px 0px 30px #00abfb
 		text-decoration: none
@@ -157,6 +160,7 @@ body
 	font-weight: 600
 	margin-left: 15px
 	position: relative
+	text-align: bottom
 	white-space: nowrap
 	display: inline-block
 	&:hover
@@ -204,15 +208,16 @@ body
 @media (max-width: 767px)
 	.page-header-section > .container:first-child
 		max-width: 100%
-	
-	.dis-bg
+
+	.dis
 		display: none
 
 	.mob-head-wrap
 		background-color: #fff
-		border-bottom-left-radius: 60px
-		border-bottom-right-radius: 60px
+		border-bottom-left-radius: 1100px
+		border-bottom-right-radius: 1100px
 		padding-bottom: 15px
+		overflow: hidden
 
 	.navbar
 		justify-content: center
@@ -247,7 +252,7 @@ body
 		top: 350px
 
 	.hero
-		margin-top: 50px
+		margin-top: 30px
 		text-align: center
 		margin-bottom: 250px
 
@@ -257,6 +262,7 @@ body
 
 	.hero-text
 		font-size: 15px
+		margin-bottom: 20px
 
 	.hero-icon
 		display: none
@@ -310,12 +316,16 @@ body
 .works-item
 	padding: 22px 15px
 	font-size: 16px
+	display: flex
+	align-items: center
 	font-weight: 700
 	border-bottom: solid 2px #e6e6e6
 	&:last-child
 		border: none
 	img
-		padding-right: 10px
+		margin-right: 10px
+		width: 31px
+		height: 31px
 
 @media (max-width: 991px)
 	.works-item
@@ -446,10 +456,10 @@ body
 .price-section
 	margin-bottom: 130px
 
-@media (max-width: 993px)
+@media (max-width: 991px)
 	.slide
 		padding: 30px 20px
-		height: 300px
+		height: 100%
 
 	.slide-title
 		font-size: 16px
@@ -459,7 +469,6 @@ body
 	.slide-text
 		font-size: 12px
 		margin-bottom: 10px
-		white-space: nowrap
 
 	.slide-sum
 		margin-bottom: 10px
@@ -476,16 +485,36 @@ body
 
 	.slider
 		display: flex
+		flex-direction: row
+		align-items: strech
 		flex-wrap: wrap
 		justify-content: center
 		& > div
-			flex-wrap: wrap
-			flex-basis: 50%
-			flex-grow: 1
-			flex-shrink: 1
+			width: 50%
 			margin-bottom: 20px
 			&:focus
 				outline: none
+
+@media (max-width: 575px)
+	.slide
+		padding: 30px 10px
+
+	.slider > div
+		max-width: 50%
+
+	.slide-title
+		line-height: 18px
+
+	.slide-text
+		font-size: 10px
+		line-height: 15px
+
+	.slide-sum
+		font-size: 14px
+
+	.slide-btn
+		width: 100%
+		padding: 5px 5px
 
 .price-section-subtitle
 	font-size: 12px
@@ -519,11 +548,11 @@ body
 	padding-left: 0
 
 .call-list-item
-	margin-bottom: 25px
+	margin-bottom: 15px
 	padding-left: 15px
 
 .call-text
-	font-size: 16px
+	font-size: 20px
 	color: #ffffff
 	margin-bottom: 70px
 	margin-top: 50px

@@ -9,9 +9,37 @@ $(document).ready(function () {
 	$('#navbarCollapse').on('hide.bs.collapse', function () {
 		burgerAnimate.removeClass('nav-toggle--active');
 	});
+	// nav icon animate
 
+	// AJAX
+	$('#expressFormId').submit(function() {
+		$.ajax({
+			type: "POST",
+			url: "send.php",
+			data: $(this).serialize()
+		}).done(function() {
+			$('#doneModal').modal('show');
+		});
+		return false;
+	});
+
+	$('#expressFormModal').submit(function() {
+		$.ajax({
+			type: "POST",
+			url: "send.php",
+			data: $(this).serialize()
+		}).done(function() {
+			$('#formModal').modal('hide');
+			$('#doneModal').modal('show');
+		});
+		return false;
+	});
 });
-// Slider
+
+	// AJAX
+
+
+	// Slider
 $(window).on("load resize", function(){
 	$('.slide').css('display', 'flex');
 	var width = $(document).width();
@@ -26,19 +54,19 @@ $(window).on("load resize", function(){
 		});
 	}
 });
-// Slider
-// WOW
+	// Slider
+	// WOW
 wow = new WOW ({
 	mobile: false
 });
 
 wow.init();
-// WOW
+	// WOW
 
-// show tel
+	// show tel
 $('.show-tel').on('click', function() {
 	$(this).fadeOut(200, function() {
 		$('.modal-tel').fadeIn(200);
 	});
 });
-// show tel
+	// show tel
