@@ -44,7 +44,7 @@ $(window).on("load resize", function(){
 	$('.slide').css('display', 'flex');
 	var width = $(document).width();
 	
-	if (width <= 991) {
+	if (width <= 974) {
 		$('.slider').slick('unslick');
 	} else {
 		$('.slider').not('.slick-initialized').slick({  

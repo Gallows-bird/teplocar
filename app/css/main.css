@@ -1,24 +1,21 @@
 @font-face {
   font-family: 'Proxima nova';
   src: url("../fonts/ProximaNova-Regular.eot");
-  src: url("../fonts/ProximaNova-Regular.eot?#iefix") format("embedded-opentype");
-  src: url("../fonts/ProximaNova-Regular.woff");
+  src: url("../fonts/ProximaNova-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Regular.svg"), url("../fonts/ProximaNova-Regular.woff"), url("../fonts/ProximaNova-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal; }
 
 @font-face {
   font-family: 'Proxima nova';
   src: url("../fonts/ProximaNova-Semibold.eot");
-  src: url("../fonts/ProximaNova-Semiblod.eot?#iefix") format("embedded-opentype");
-  src: url("../fonts/ProximaNova-Semibold.woff");
+  src: url("../fonts/ProximaNova-Semiblod.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Semibold.svg"), url("../fonts/ProximaNova-Semibold.woff"), url("../fonts/ProximaNova-Semibold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal; }
 
 @font-face {
   font-family: 'Proxima nova';
   src: url("../fonts/ProximaNova-Bold.eot");
-  src: url("../fonts/ProximaNova-Blod.eot?#iefix") format("embedded-opentype");
-  src: url("../fonts/ProximaNova-Bold.woff");
+  src: url("../fonts/ProximaNova-Blod.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Bold.svg"), url("../fonts/ProximaNova-Bold.woff"), url("../fonts/ProximaNova-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal; }
 
@@ -412,7 +409,7 @@ body {
   margin-bottom: 70px; }
 
 .slide {
-  padding: 50px 30px 40px 30px;
+  padding: 65px 30px 40px 30px;
   text-align: center;
   margin-left: 10px;
   margin-right: 10px;
@@ -532,17 +529,20 @@ body {
 .slide-title {
   font-size: 24px;
   font-weight: 700;
-  line-height: 28px; }
+  line-height: 28px;
+  margin-bottom: 0px; }
 
 .slide-text {
-  font-size: 16px; }
+  font-size: 16px;
+  margin-top: auto;
+  margin-bottom: auto; }
 
 .slide-sum {
   font-size: 16px;
   font-weight: 700;
   font-family: 'Montserrat', sans-serif;
-  margin-top: auto;
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  margin-top: auto; }
 
 .slick-list {
   padding-bottom: 20px; }
@@ -559,9 +559,9 @@ body {
       -ms-flex-item-align: center;
           align-self: center;
   display: inline-block;
-  padding: 10px 25px;
-  -webkit-box-shadow: 0px 5px 15px #0a68e9;
-          box-shadow: 0px 5px 15px #0a68e9; }
+  padding: 15px 20px;
+  -webkit-box-shadow: 0px 12px 24px 0px rgba(9, 53, 241, 0.69);
+          box-shadow: 0px 12px 24px 0px rgba(9, 53, 241, 0.69); }
   .slide-btn:hover {
     text-decoration: none;
     color: #ffffff; }
@@ -590,13 +590,12 @@ body {
   .slide-sum {
     margin-bottom: 10px; }
   .slide-btn {
-    margin-top: auto;
     width: 80%;
     -webkit-align-self: center;
         -ms-flex-item-align: center;
             align-self: center;
     font-size: 12px;
-    padding: 10px 15px; }
+    padding: 15px 25px; }
   .price-section {
     margin-bottom: 50px; }
   .slider {
@@ -639,8 +638,8 @@ body {
   .slide-sum {
     font-size: 14px; }
   .slide-btn {
-    width: 90%;
-    padding: 5px 5px; } }
+    width: 100%;
+    padding: 12px 5px; } }
 
 .price-section-subtitle {
   font-size: 12px;
